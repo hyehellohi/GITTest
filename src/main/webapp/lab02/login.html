@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+h2 {
+	border-radius: 5px;
+	background-color: wheat;
+	text-align: center;
+	padding: 15px 0;
+}
+
+#regform {
+	padding: 15px 20px;
+	border-radius: 10px;
+	margin: auto;
+	width: 50%;
+	background-color: SandyBrown;
+}
+	
+</style>
+<script type="text/javascript">
+	function login(){
+		alert("ID와 비밀번호를 제대로 입력하셨습니까?");
+		document.getElementById("login").style.display = "none";
+		document.getElementById("rid").innerHTML = document.form1.id.value;
+		document.getElementById("result").setAttribute("style","display : block; background-color:khaki;");
+		
+	}
+</script>
+</head>
+<body>
+<h2>로그인</h2>
+<hr>
+<div id="login">
+	<form name="form1">
+		<label>id</label><br>
+		<input type="text" name="id" size="40"><br>
+		<hr>
+		<label>password</label><br>
+		<input type="password" name="pw" size="40"><br>
+		<button type="button" onclick="login()">login</button>		
+	</form>
+</div>
+
+<div id="result" class="result">
+	<h3>로그인 정보</h3>
+	<hr>
+	이름 : <span id="rid"></span><br>
+	환영합니다!
+</div>
+
+<script type="text/javascript">
+	document.getElementById("result").style.display = "none";
+</script>
+
+</body>
+</html>
